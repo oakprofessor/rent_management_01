@@ -105,6 +105,7 @@ ActiveRecord::Schema.define(version: 2018_07_26_063353) do
     t.string "email"
     t.string "address"
     t.string "stk"
+    t.string "account"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.string "password_digest"
