@@ -26,6 +26,7 @@
 /config/master.key
 /config/database.yml
 /.idea/*
+/public/imgHouse
 
 config/settings.local.yml
 config/settings/*.local.yml
