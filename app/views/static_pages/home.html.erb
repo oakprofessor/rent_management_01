@@ -1,6 +1,6 @@
 <% provide :title, "ShaRoom" %>
-<div id="container-full">
-  <div class="content" style="height: 985px">
+<div id="home">
+  <div class="content" stt="home">
     <div class="container">
       <div class="row">
         <div class="col-sm-2">
@@ -12,17 +12,15 @@
           <div class="row">
             <div class="col-sm-12">
               <div class="slideshow-container">
-                <div class="mySlides slide">
+                <div class="mySlides slide" stt="1">
                   <img src="imgHouse/house1.jpg" style="width:100%" class="ig">
                 </div>
-                <div class="mySlides slide">
+                <div class="mySlides slide" stt="2" style="display:none;">
                   <img src="imgHouse/h.jpg" style="width:100%" class="ig">
                 </div>
-                <div class="mySlides slide">
+                <div class="mySlides slide" stt="3" style="display:none">
                   <img src="imgHouse/h1.jpg" style="width:100%" class="ig">
                 </div>
-                <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
-                <a class="next" onclick="plusSlides(1)">&#10095;</a>
               </div>
               <br>
               <div style="text-align:center">
@@ -89,12 +87,12 @@
         </div>
         <div class="col-sm-3 well">
           <ul class="nav nav-tabs">
-            <li class="active"><a data-toggle="tab" href="#room"><%= t ".home_rooma" %><br><%= t ".home_roomb" %></a></li>
+            <li class="active"><a data-toggle="tab" href="#phongtro"><%= t ".home_rooma" %><br><%= t ".home_roomb" %></a></li>
             <li><a data-toggle="tab" href="#chung_cu"><%= t ".home_roomc" %><br><%= t ".home_roomd" %></a></li>
             <li><a data-toggle="tab" href="#nguyen_can"><%= t ".home_roome" %><br><%= t ".home_roomf" %></a></li>
           </ul>
           <div class="tab-content">
-            <div id="room" class="tab-pane fade in active">
+            <div id="phongtro" class="tab-pane fade in active">
               <div class="form-group">
                 <div class="input-group mb-3">
                   <select class="custom-select" id="inputGroupSelect03" aria-label="Example select with button addon">

@@ -34,16 +34,16 @@
     <nav class="navbar">
       <div class="container-fluid">
         <div class="navbar-header" id="logo">
-          <a class="navbar-brand" href="#"><img src="imgHouse/logo.png"></a>
+          <a class="navbar-brand" href="#"><%= image_tag "imgHouse/logo.png" %></a>
         </div>
         <div class="menu">
           <nav class="nav-menu">
             <ul>
-              <li><%= link_to t(".head_home"), "#" %></li>
-              <li><%= link_to t(".head_rent"), "#" %></li>
-              <li><%= link_to t(".head_news"), "#" %></li>
-              <li><%= link_to t(".head_contact"), "#" %></li>
-              <li><%= link_to t(".head_help"), "#" %></a></li>
+              <li><%= link_to t(".head_home"), root_path %></li>
+              <li><%= link_to t(".head_rent"), room_path %></li>
+              <li><%= link_to t(".head_news"), news_path %></li>
+              <li><%= link_to t(".head_contact"), contact_path %></li>
+              <li><%= link_to t(".head_help"), help_path %></a></li>
             </ul>
           </nav>
         </div>
