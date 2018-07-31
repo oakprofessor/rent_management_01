@@ -1,4 +1,4 @@
-<div class="header"> 
+<div class="header">
   <div class="ct-signup-login">
     <div class="navbar navbar-inverse">
       <div class="container">
@@ -13,9 +13,18 @@
         <nav>
           <ul class="nav navbar-nav navbar-right">
             <li><span class="glyphicon glyphicon-user"></span></li>
-            <li><a href="#">Sign up</a></li>
+            <li><a href="#"><%= t ".sign_up" %></a></li>
             <li><span class="glyphicon glyphicon-log-in"></span></li>
-            <li><a href="#">Log In</a></li>
+            <li><a href="#"><%= t ".log_in" %></a></li>
+            <li class="dropdown">
+              <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+                <%= t ".language" %> <b class="caret"></b>
+              </a>
+              <ul class="dropdown-menu">
+                <%= link_to t(:english), locale:"en" %>
+                <%= link_to t(:vietnamese), locale:"vi" %>
+              </ul>
+            </li>
           </ul>
         </nav>
       </div>
@@ -30,11 +39,11 @@
         <div class="menu">
           <nav class="nav-menu">
             <ul>
-              <li><%= link_to "Trang chủ", "#" %></li>
-              <li><%= link_to "Phòng trọ", "#" %></li>
-              <li><%= link_to "Tin tức", "#" %></li>
-              <li><%= link_to "Liên hệ", "#" %></li>
-              <li><%= link_to "Giúp đỡ", "#" %></a></li>
+              <li><%= link_to t(".head_home"), "#" %></li>
+              <li><%= link_to t(".head_rent"), "#" %></li>
+              <li><%= link_to t(".head_news"), "#" %></li>
+              <li><%= link_to t(".head_contact"), "#" %></li>
+              <li><%= link_to t(".head_help"), "#" %></a></li>
             </ul>
           </nav>
         </div>

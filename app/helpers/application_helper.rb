@@ -1,6 +1,6 @@
 module ApplicationHelper
   def full_title page_title = ""
-    base_title = "Chia sẻ thông tin - Tìm kiếm phòng trọ"
+    base_title = t ".app_title"
     if page_title.empty?
       base_title
     else
