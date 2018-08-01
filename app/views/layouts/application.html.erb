@@ -12,12 +12,13 @@
     <%= render "layouts/shim" %>
   </head>
   <body>
-    <div class="img_full">
-      <%= render "layouts/header" %>
-      <div class="containers">
-        <%= yield %>
-      </div>
-      <%= render "layouts/footer" %>
+    <%= render "layouts/header" %>
+    <div class="container">
+      <% flash.each do |message_type, message| %>
+        <%= content_tag(:div, message, class: "alert alert-#{message_type}") %>
+      <% end %>
+      <%= yield %>
     </div>
+    <%= render "layouts/footer" %>
   </body>
 </html>

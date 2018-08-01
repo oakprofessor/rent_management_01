@@ -31,13 +31,16 @@ body{
 .ct-signup-login .glyphicon:hover{
   color: $color_item_header_hover;
 }
+.dropdown-toggle{
+  margin-top: 6px;
+}
 
 #logo{
   margin-left: 50px;
-    
+
 }
 .sticky-top .container-fluid img{
-	height: 55px;
+  height: 55px;
 }
 
 .qc1{
@@ -165,7 +168,7 @@ body{
 }
 
 @-webkit-keyframes fade {
-  from {opacity: .4} 
+  from {opacity: .4}
   to {opacity: 1}
 }
 
@@ -210,7 +213,7 @@ body{
 }
 
 #home .pre-scrollable ul li{
-  padding: 2px 0; 
+  padding: 2px 0;
   border-bottom: 1px solid $color_scoll_select;
 }
 
@@ -343,7 +346,7 @@ body{
   height: 195px;
   border-radius: 5%;
   transform: scale(1,1);
-	
+
 }
 
 #room .col-sm-3:hover img{
@@ -390,11 +393,11 @@ body{
   width: 100%;
   padding: 12px;
   border: 1px solid $color_item_header_hover;
-  border-radius: 4px; 
-  box-sizing: border-box; 
-  margin-top: 6px; 
+  border-radius: 4px;
+  box-sizing: border-box;
+  margin-top: 6px;
   margin-bottom: 16px;
-  resize: vertical 
+  resize: vertical
 }
 
 #contat input[type=submit] {
@@ -414,4 +417,20 @@ body{
   border-radius: 5px;
   background-color: $color_scoll_select;
   padding: 20px;
+}
+
+#login .checkbox {
+  margin-bottom: 10px;
+  span {
+    margin-left: 20px;
+    font-weight: normal;
+  }
+}
+
+#login p{
+  margin: 15px 0;
+}
+#session_remember_me {
+  width: auto;
+  margin-left: 0;
 }
