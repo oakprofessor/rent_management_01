@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>
+    <%= full_title(yield(:title)) %>
+  </title>
+  <%= csrf_meta_tags %>
+  <%= csp_meta_tag %>
+  <%= stylesheet_link_tag "application", media: "all",
+    "data-turbolinks-track": "reload" %>
+  <%= javascript_include_tag "application",
+    "data-turbolinks-track": "reload" %>
+<meta charset="utf-8">
+<style>
+</style>
+</head>
+<body>
+  <div class="wrapper" id="admin">
+    <%= render "layouts/header_admin"%>
+    <nav class=" sidenav" role="navigation" >
+      <a href="index.php" ><i class="fa fa-desktop "></i> Trang chủ <span class="badge"></span></a>
+      <button class="dropdown-btn"><i class="fa fa-table "></i> Quản lý tài khoản
+      <i class="fa fa-caret-down"></i>
+      </button>
+      <div class="dropdown-container">
+      <a href="#">Link 1</a>
+      <a href="#">Link 2</a>
+      <a href="#">Link 3</a>
+      </div>
+      <button class="dropdown-btn"><i class="fa fa-table "></i> Quản lý danh muc
+        <i class="fa fa-caret-down"></i>
+      </button>
+      <div class="dropdown-container">
+        <a href="#">Link 1</a>
+        <a href="#">Link 2</a>
+        <a href="#">Link 3</a>
+      </div>
+    </nav>
+    <div class="content">
+      <%= yield %>
+    </div>
+
+  </div>
+</body>
+</html>
+

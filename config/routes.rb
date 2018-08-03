@@ -1,4 +1,10 @@
 Rails.application.routes.draw do
+  namespace :admin do
+    get "users/account"
+  end
+  get "orders/new"
+  get "admin/account"
+  get "admin/index"
   root "static_pages#home"
   get  "/room", to: "static_pages#room"
   get  "/news", to: "static_pages#news"
