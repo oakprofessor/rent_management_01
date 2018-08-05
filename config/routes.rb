@@ -6,6 +6,7 @@ Rails.application.routes.draw do
   get "admin/account"
   get "admin/index"
   root "static_pages#home"
+  get "home", to: "static_pages#home"
   get  "/room", to: "rooms#index"
   get  "/room/:id", to: "rooms#show"
   get "/bookroom/:id", to: "rooms#bookroom"
