@@ -7,11 +7,12 @@ body{
   margin: 0 ;
   width: 100%;
   height: 100%;
+}
+.full_img{
   background-image: linear-gradient(to bottom, rgba(0,0,0,0.2) 0%,rgba(0,0,0,0.5) 100%),
-  asset-url('imgHouse/im_1.jpg');
+    asset-url('imgHouse/im_1.jpg');
   background-size: cover;
 }
-
 .containers{
   height: 100%;
 }
@@ -26,6 +27,10 @@ body{
 .ct-signup-login .glyphicon{
   color: $color_item_header;
   padding: 14px 0;
+}
+
+.ct-signup-login .glyphicon-globe{
+  padding-right: 12px;
 }
 
 .ct-signup-login .glyphicon:hover{
@@ -106,7 +111,6 @@ body{
 #home{
   width: 100%;
   height: 100%;
-  background-size: cover;
 }
 
 #home .content{
@@ -118,6 +122,34 @@ body{
 
 #home img{
   vertical-align: middle;
+}
+
+#home .qc1 img{
+  width: 150px;
+  height: 100%;
+}
+
+#home .mySlides img{
+  width: 100%;
+}
+
+#home .house-host img{
+  height:110px; 
+  width:150px;
+  background-size: cover;
+  border-radius: 5%;
+}
+#home .ct{
+  width: 100%;
+  height: 100%;
+}
+#home .col-sm-9 .well{
+  height: 110px;
+}
+#home .ct p{
+  width: 440px;
+  height: 40px;
+  overflow: hidden;
 }
 
 #home .slideshow-container {
@@ -315,7 +347,7 @@ body{
 
 //Tạo page Room
 #room{
-  height: 2000px;
+  height: 1980px;
   z-index: 1;
   margin-top: 50px;
 }
@@ -339,6 +371,50 @@ body{
   border-radius: 5%;
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.3), 0 6px 20px 0 rgba(0, 0, 0, 0.3);
 }
+
+#room .list-product .row{
+  margin: 0;
+  margin-top: 5px;
+}
+#room .contentPost{
+  width: 480px;
+  height: 120px;
+  float: right;
+}
+#room .labelPost{
+  width: 100px;
+  float: left;
+  background-color: white;
+  height: 150px;
+}
+#room .labelPost label{
+  margin-left: 3px;
+  margin-top: 3px;
+  padding-top: 4px;
+  width: 60px;
+  height: 31px;
+  border-bottom: 1px solid $color_border_menu_bar;
+}
+#room .contentPost .list-product{
+  background-color: white;
+  height: 120px;
+  overflow: hidden;
+}
+#room .contentPost .list-product .row{
+  height: 32px;
+  padding-left: 20px;
+  padding-top: 4px;
+  margin-left: 5px;
+  border-bottom: 0.7px solid $color_border_menu_bar;
+}
+#room .contentPost .btn-md{
+  margin-top: 8px;
+  margin-left: 440px;
+}
+#room .contentPost .glyphicon-check{
+  width:30px;
+}
+
 #room .imgPost img{
   position: absolute;
   left: 0px;
@@ -354,11 +430,79 @@ body{
   opacity: 0.95;
 }
 
-#room .col-sm-7 .well{
-  width: 600px;
+#room .col-sm-8 .well{
+  width: 650px;
   height: 195px;
   margin-left: 40px;
 }
+#room .btn span{
+  width: 27px;
+  margin-top: 1px;
+  color: white;
+}
+#room .btn{
+  margin-top: 10px;
+  float: right; 
+}
+#room .btn:hover{
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+#room .btn a{
+  color: white;
+  text-decoration: none;
+}
+#room .submit{
+  background-color: #2196F3;
+}
+#room .detail{
+  background: #4CAF50;
+  margin-right: 10px;
+}
+
+#room .details .col-sm-10{
+  margin-left: 9%;
+}
+#room .details .header_detail{
+  width: 110px;
+  height: 40px;
+  border-radius: 5%;
+  background-color: #4CAF50;
+  color: white;
+  font-size: 20px;
+  padding-left: 10px;
+  padding-top: 6px;
+}
+
+#room .details .col-sm-4{
+  margin-top: 5%;
+}
+
+#room .details .imgPost img{
+  position: absolute;
+  left: 0px;
+  width: 300px;
+  height: 250px;
+  border-radius: 5%;
+  transform: scale(1,1);
+
+}
+
+#room .imgPost{
+  position: relative;
+  width: 300px;
+  height: 250px;
+  background-size: cover;
+  transition: transform 4s;
+  overflow: hidden;
+  border-radius: 5%;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.3), 0 6px 20px 0 rgba(0, 0, 0, 0.3);
+}
+
+#room .col-sm-3:hover img{
+  transform: scale(1.2,1.2);
+  opacity: 0.95;
+}
+
 //Tạo page Tin tức
 #news{
   margin-top: 80px;
@@ -433,4 +577,78 @@ body{
 #session_remember_me {
   width: auto;
   margin-left: 0;
+}
+
+/* Fixed sidenav, full height */
+#admin .sidenav {
+  margin-top: 59px;
+  height: 100%;
+  width: 250px;
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  background-color: white;
+  overflow-x: hidden;
+}
+
+/* Style the sidenav links and the dropdown button */
+#admin .sidenav a, .dropdown-btn {
+  padding: 20px 20px 6px 16px;
+  text-decoration: none;
+  font-family: 'Open Sans', sans-serif;
+  font-size: 15px;
+  color: #214761;
+  display: block;
+  border: none;
+  background: none;
+  width: 100%;
+  text-align: left;
+  cursor: pointer;
+  border-bottom: solid 1px aqua;
+  line-height: 30px;
+  font-weight: bold;
+}
+
+/* On mouse-over */
+#admin .sidenav a:hover, .dropdown-btn:hover {
+  color: #214761;
+}
+
+/* Main content */
+#admin .main {
+  margin-left: 200px; /* Same as the width of the sidenav */
+  font-size: 20px; /* Increased text to enable scrolling */
+  padding: 0px 10px;
+}
+
+/* Add an active class to the active dropdown button */
+#admin .active {
+  background-color: white;
+  color: #214761;
+}
+
+/* Dropdown container (hidden by default). Optional: add a lighter background color and some left padding to change the design of the dropdown content */
+#admin .dropdown-container {
+  -webkit-transition: height 2s;
+  transition: height 2s;
+  display: none;
+  background-color: white;
+  padding-left: 8px;
+}
+
+/* Optional: Style the caret down icon */
+#admin .fa-caret-down {
+  float: right;
+  padding-right: 8px;
+}
+#admin .content {
+margin-top: 30px;
+margin-left: 280px;
+}
+
+/* Some media queries for responsiveness */
+@media screen and (max-height: 450px) {
+  #admin .sidenav {padding-top: 15px;}
+  #admin .sidenav a {font-size: 18px;}
 }

@@ -5,7 +5,7 @@
       <div class="row">
         <div class="col-sm-2">
           <div class="qc1">
-            <img src="imgHouse/Qc1.png" class="img-QC" height="100%" width="150" alt="Avatar">
+            <%= image_tag "imgHouse/Qc1.png" %>
           </div>
         </div>
         <div class="col-sm-7">
@@ -13,13 +13,13 @@
             <div class="col-sm-12">
               <div class="slideshow-container">
                 <div class="mySlides slide" stt="1">
-                  <img src="imgHouse/house1.jpg" style="width:100%" class="ig">
+                  <%= image_tag "imgHouse/house1.jpg" %>
                 </div>
                 <div class="mySlides slide" stt="2" style="display:none;">
-                  <img src="imgHouse/h.jpg" style="width:100%" class="ig">
+                  <%= image_tag "imgHouse/h.jpg" %>
                 </div>
                 <div class="mySlides slide" stt="3" style="display:none">
-                  <img src="imgHouse/h1.jpg" style="width:100%" class="ig">
+                  <%= image_tag "imgHouse/h1.jpg" %>
                 </div>
               </div>
               <br>
@@ -33,7 +33,23 @@
           <div class="row">
             <div class="col-sm-3">
               <div class="house-host">
-                <a href="#"><img src="imgHouse/house_host.jpeg" class="ig" height="110" width="150" alt="Avatar" style="background-size: cover;border-radius: 5%;"></a>
+                <a href="#"><%= image_tag "imgHouse/house_host.jpeg" %>
+              </div>
+            </div>
+            <div class="col-sm-9">
+              <div class="well">
+                <p>lajgkadnagmdbjagbagkjfgdngdsmgsfdmgnfkjfng
+                kdsbgangfg.fdmgnjgfsmglbjgnsemgagmeanggdf.g
+                safnasdfnmdsMmadsagadmgbddvmdnavfbdakfndmf</p>
+                <%= link_to "See more...", room_path %>
+              </div>
+            </div>
+          </div>
+          <hr>
+          <div class="row">
+            <div class="col-sm-3">
+              <div class="house-host">
+                <%= image_tag "imgHouse/house_host2.jpg" %>
               </div>
             </div>
             <div class="col-sm-9">
@@ -46,8 +62,7 @@
           <div class="row">
             <div class="col-sm-3">
               <div class="house-host">
-                <img src="imgHouse/house_host2.jpg" class="ig" height="110" width="150" alt="Avatar"
-                  style="background-size: cover;border-radius: 5%;">
+                <%= image_tag "imgHouse/house_host3.jpg" %>
               </div>
             </div>
             <div class="col-sm-9">
@@ -60,22 +75,7 @@
           <div class="row">
             <div class="col-sm-3">
               <div class="house-host">
-                <img src="imgHouse/house_host3.jpg" class="ig" height="110" width="150" alt="Avatar"
-                  style="background-size: cover;border-radius: 5%;">
-              </div>
-            </div>
-            <div class="col-sm-9">
-              <div class="well">
-                <p><%= t ".home_board" %></p>
-              </div>
-            </div>
-          </div>
-          <hr>
-          <div class="row">
-            <div class="col-sm-3">
-              <div class="house-host">
-                <img src="imgHouse/house_host1.jpg" class="ig" height="110" width="150" alt="Avatar"
-                  style="background-size: cover;border-radius: 5%;">
+                <%= image_tag "imgHouse/house_host1.jpg" %>
               </div>
             </div>
             <div class="col-sm-9">
@@ -161,6 +161,6 @@
     </div>
   </div>
   <div class="sale">
-    <img src="imgHouse/QC4.jpg">
+    <%= image_tag "imgHouse/QC4.jpg" %>
   </div>
 </div>

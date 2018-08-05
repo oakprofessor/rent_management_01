@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2018_08_01_044238) do
+ActiveRecord::Schema.define(version: 2018_08_05_045548) do
 
   create_table "facilities", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
     t.string "name"
@@ -42,8 +42,6 @@ ActiveRecord::Schema.define(version: 2018_08_01_044238) do
     t.integer "number_person"
     t.integer "number_bike"
     t.integer "number_motobike"
-    t.index ["customer_id"], name: "index_orders_on_customer_id"
-    t.index ["owner_id"], name: "index_orders_on_owner_id"
     t.index ["room_id"], name: "index_orders_on_room_id"
   end
 
@@ -105,6 +103,8 @@ ActiveRecord::Schema.define(version: 2018_08_01_044238) do
     t.datetime "updated_at", null: false
     t.string "price"
     t.text "description"
+    t.bigint "home_id"
+    t.index ["home_id"], name: "index_rooms_on_home_id"
   end
 
   create_table "services", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
@@ -119,6 +119,7 @@ ActiveRecord::Schema.define(version: 2018_08_01_044238) do
     t.string "email"
     t.string "address"
     t.string "stk"
+    t.string "account"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.string "password_digest"
@@ -134,4 +135,5 @@ ActiveRecord::Schema.define(version: 2018_08_01_044238) do
   add_foreign_key "room_facilites", "rooms"
   add_foreign_key "room_services", "rooms"
   add_foreign_key "room_services", "services"
+  add_foreign_key "rooms", "homes"
 end
