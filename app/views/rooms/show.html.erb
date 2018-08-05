@@ -1,7 +1,7 @@
 <div class="content" stt="room" id="room">
   <div class="container">
     <div class="row details">
-      <div class="col-sm-10 well">
+      <div class="col-sm-12 well">
         <div class="header_detail">
             CHI TIẾT
         </div>
@@ -20,26 +20,29 @@
                   <%= f.label :Area %>
                   <%= f.label :Numberroom %>
                   <%= f.label :Price %>
-                <% end %>hung
+                <% end %>
               </div>
               <div class="contentPost">
                 <div class="list-product">
                   <div class="row">
                     <%= @room.name%>
                   </div>
-                <div class="row">
+                  <div class="row">
                     <% @home = Home.find_by id: @room.id %>
                     <%= @home.address %>
-                </div>
-                <div class="row">
-                  <%= @room.number_room %>
-                </div>
-                <div class="row">
-                  <%= @room.price %>
+                  </div>
+                  <div class="row">
+                    <%= @room.number_room %>
+                  </div>
+                  <div class="row">
+                    <%= @room.number_room %>
+                  </div>
+                  <div class="row">
+                    <%= @room.price %>
+                  </div>
                 </div>
               </div>
-            </div>
-            <button class="btn submit"><span class="glyphicon glyphicon-check"></span><%= link_to "Đặt phòng", controller: "rooms", action: "bookroom", id: @room.id %></button>
+              <button class="btn submit"><span class="glyphicon glyphicon-check"></span><%= link_to "Đặt phòng", controller: "rooms", action: "bookroom", id: @room.id %></button>
             </div>
           </div>
         </div>

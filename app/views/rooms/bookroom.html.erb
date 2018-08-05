@@ -1,3 +1,26 @@
-đm búc rôm
-Roomid: <%= @room.id %>
-Uesrid: <%= current_user.id%>
+<div class="well" id="login">
+  <div class="row">
+    <div class="col-md-6 col-md-offset-3">
+      <%= form_for :order do |f| %>
+
+        <%= f.label :dateStart %>
+        <%= f.date_field :dateStart, class: "form-control" %>
+
+        <%= f.label :dateEnd %>
+        <%= f.date_field :dateEnd, class: "form-control" %>
+
+        <%= f.label :numberPersion %>
+        <%= f.number_field :phone, class: "form-control" %>
+
+        <%= f.label :numberBike %>
+        <%= f.number_field :address, class: "form-control" %>
+
+        <%= f.label :numberMotobike %>
+        <%= f.number_field :stk, class: "form-control" %>
+
+        <%= f.label :description %>
+        <%= f.text_field :account, class: "form-control" %>
+
+        <%= f.submit "Create my account", class: "btn btn-primary" %>
+      <% end %>
+    </div>
