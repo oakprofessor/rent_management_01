@@ -10,7 +10,14 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2018_08_05_045548) do
+ActiveRecord::Schema.define(version: 2018_08_05_092138) do
+
+  create_table "admin_home_demos", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
+    t.string "name"
+    t.integer "number_room"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
 
   create_table "facilities", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
     t.string "name"
@@ -42,6 +49,8 @@ ActiveRecord::Schema.define(version: 2018_08_05_045548) do
     t.integer "number_person"
     t.integer "number_bike"
     t.integer "number_motobike"
+    t.index ["customer_id"], name: "index_orders_on_customer_id"
+    t.index ["owner_id"], name: "index_orders_on_owner_id"
     t.index ["room_id"], name: "index_orders_on_room_id"
   end
 
@@ -124,6 +133,7 @@ ActiveRecord::Schema.define(version: 2018_08_05_045548) do
     t.datetime "updated_at", null: false
     t.string "password_digest"
     t.string "remember_digest"
+    t.string "role"
   end
 
   add_foreign_key "homes", "users"

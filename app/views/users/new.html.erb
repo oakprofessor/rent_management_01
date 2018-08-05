@@ -1,4 +1,12 @@
 <% provide(:title, "Sign up") %>
+<%
+    def options_for_status
+  [
+    ['Khách thuê','customer'],
+    ['Chủ nhà','owner']
+  ]
+end
+%>
 <h1>Sign up</h1>
 <div class="well" id="login">
   <div class="row">
@@ -30,8 +38,12 @@
         <%= f.label :password_confirmation, "Confirmation" %>
         <%= f.password_field :password_confirmation, class: "form-control" %>
 
+        <%= f.label :role %>
+        <%= f.select :role, options_for_status, {}, prompt: 'Chọn vai trò' %>
+
         <%= f.submit "Create my account", class: "btn btn-primary" %>
       <% end %>
     </div>
   </div>
 </div>
+
