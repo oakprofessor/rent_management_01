@@ -19,6 +19,14 @@ $(document).ready(function(){
     dots[slideIndex-1].className += ' active';
     setTimeout(showSlides, 2000);
   }
+  function openSearch() {
+    document.getElementById("myOverlay").style.display = "block";
+  }
+  
+  // Close the full screen search box 
+  function closeSearch() {
+    document.getElementById("myOverlay").style.display = "none";
+  }
     var sticky = function(){
       var scroll = $(window).scrollTop();
       if(scroll > na){

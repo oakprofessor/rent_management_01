@@ -27,6 +27,7 @@
                   </li>
                 </ul>
               </li>
+              <li><span class="glyphicon glyphicon-globe"></span></li>
             <% else %>
               <li><span class="glyphicon glyphicon-user"></span></li>
               <li><%= link_to t(".sign_up") , signup_path %></li>
@@ -50,7 +51,7 @@
     <nav class="navbar">
       <div class="container-fluid">
         <div class="navbar-header" id="logo">
-          <a class="navbar-brand" href="#"><img src="imgHouse/logo.png"></a>
+          <a class="navbar-brand" href="#"><%= image_tag "imgHouse/logo.png" %></a>
         </div>
         <div class="menu">
           <nav class="nav-menu">

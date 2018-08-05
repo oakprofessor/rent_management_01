@@ -4,7 +4,6 @@ class Room < ApplicationRecord
   has_many :orders
   has_many :photos, dependent: :destroy
 
-  belongs_to :home
 
   validates :name, presence: true
   validates :state, presence: true
