@@ -1,0 +1,29 @@
+<div id="page-inner">
+  <div class="row">
+    <div class="col-lg-12">
+    <div class="panel panel-primary">
+      <div class="panel-heading"><i class="fa fa-list"></i> DANH SÁCH KHU TRO</div>
+      <div class="panel-body">
+        <table class="table table-bordered">
+          <thead>
+            <tr>
+              <th>Customer</th>
+              <th>Room</th>
+              <th>State</th>
+              <th>Date state</th>
+              <th>Date end</th>
+            </tr>
+          </thead>
+          <tbody>
+            <% if(!@owner_orders.nil?) %>
+                <%= paginate @owner_orders, theme: "twitter-bootstrap-3" %>
+                <%= render partial: "owner_order",  collection: @owner_orders, as: "owner_order" %>
+            <% end %>
+          </tbody>
+        </table>
+      </div>
+    </div>
+    </div>
+  </div>
+  <hr />
+</div>

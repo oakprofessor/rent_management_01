@@ -1,6 +1,12 @@
 Rails.application.routes.draw do
   namespace :admin do
-    get "users/account"
+    get 'orders/admin_order'
+    get 'orders/owner_order'
+    get 'homes/room/:id', to: "homes#room"
+    resources :homes
+    post "/chome",  to: "homes#create"
+    resources :users
+    resources :orders
   end
   get "orders/new"
   get "admin/account"

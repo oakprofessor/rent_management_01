@@ -18,23 +18,15 @@
   <div class="wrapper" id="admin">
     <%= render "layouts/header_admin"%>
     <nav class=" sidenav" role="navigation" >
-      <a href="index.php" ><i class="fa fa-desktop "></i> Trang chủ <span class="badge"></span></a>
-      <button class="dropdown-btn"><i class="fa fa-table "></i> Quản lý tài khoản
-      <i class="fa fa-caret-down"></i>
-      </button>
-      <div class="dropdown-container">
-      <a href="#">Link 1</a>
-      <a href="#">Link 2</a>
-      <a href="#">Link 3</a>
-      </div>
-      <button class="dropdown-btn"><i class="fa fa-table "></i> Quản lý danh muc
-        <i class="fa fa-caret-down"></i>
-      </button>
-      <div class="dropdown-container">
-        <a href="#">Link 1</a>
-        <a href="#">Link 2</a>
-        <a href="#">Link 3</a>
-      </div>
+      <a href="/home" ><i class="fa fa-desktop "></i> Trang chủ <span class="badge"></span></a>
+      <% if current_user.role == "admin"%>
+      <a href="/admin/users" ><i class="fa fa-desktop "></i> Quản lý tài khoản <span class="badge"></span></a>
+      <a href="/admin/orders/admin_order" ><i class="fa fa-desktop "></i> Quản lý đơn đặt phòng <span class="badge"></span></a>
+      <% else %>
+      <a href="/admin/homes" ><i class="fa fa-desktop "></i> Quản lý phòng trọ <span class="badge"></span></a>
+      <a href="/admin/orders/owner_order" ><i class="fa fa-desktop "></i> Quản lý đơn đặt phòng <span class="badge"></span></a>
+      <% end %>
+
     </nav>
     <div class="content">
       <%= yield %>

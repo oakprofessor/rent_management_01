@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2018_08_05_092138) do
+ActiveRecord::Schema.define(version: 2018_08_05_185401) do
 
   create_table "admin_home_demos", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
     t.string "name"
@@ -36,12 +36,28 @@ ActiveRecord::Schema.define(version: 2018_08_05_092138) do
     t.index ["user_id"], name: "index_homes_on_user_id"
   end
 
+  create_table "migrations", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
+    t.string "orders"
+    t.bigint "room_id"
+    t.integer "owner_id"
+    t.integer "customer_id"
+    t.date "date_start"
+    t.string "date_end"
+    t.string "date"
+    t.string "state"
+    t.string "description"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["room_id"], name: "index_migrations_on_room_id"
+  end
+
   create_table "orders", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
     t.bigint "room_id"
     t.integer "owner_id"
     t.integer "customer_id"
     t.date "date_start"
-    t.date "date_end"
+    t.string "date_end"
+    t.string "date"
     t.string "state"
     t.string "description"
     t.datetime "created_at", null: false
@@ -49,8 +65,6 @@ ActiveRecord::Schema.define(version: 2018_08_05_092138) do
     t.integer "number_person"
     t.integer "number_bike"
     t.integer "number_motobike"
-    t.index ["customer_id"], name: "index_orders_on_customer_id"
-    t.index ["owner_id"], name: "index_orders_on_owner_id"
     t.index ["room_id"], name: "index_orders_on_room_id"
   end
 
@@ -137,6 +151,7 @@ ActiveRecord::Schema.define(version: 2018_08_05_092138) do
   end
 
   add_foreign_key "homes", "users"
+  add_foreign_key "migrations", "rooms"
   add_foreign_key "orders", "rooms"
   add_foreign_key "photos", "rooms"
   add_foreign_key "role_users", "roles"

@@ -1,0 +1,30 @@
+<div id="page-inner">
+  <div class="row">
+    <div class="col-lg-12">
+    <div class="panel panel-primary">
+      <div class="panel-heading"><i class="fa fa-list"></i> DANH SÁCH TÀI KHOẢN</div>
+      <div class="panel-body">
+        <table class="table table-bordered">
+          <thead>
+            <tr>
+              <th>Name</th>
+              <th>Area</th>
+              <th>Number of rooms</th>
+              <th>State</th>
+              <th>Tác vụ</th>
+            </tr>
+          </thead>
+          <tbody>
+            <% if(@rooms.nil?) %>
+            <%= paginate @rooms, theme: "twitter-bootstrap-3" %>
+            <%= render partial: "room",  collection: @rooms, as: "room" %>
+            <% end %>
+          </tbody>
+        </table>
+      </div>
+    </div>
+    <button class="btn btn-success"><i class="fa fa-plus"> THÊM BÀI VIẾT</i></button>
+    </div>
+  </div>
+  <hr />
+</div>
