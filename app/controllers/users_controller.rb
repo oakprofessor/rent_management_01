@@ -2,7 +2,7 @@ class UsersController < ApplicationController
   def show
     @user = User.find_by id: params[:id]
     return if @user
-    flash[:danger] = "error"
+    flash[:danger] = t("controllers.users_controller.danger")
     redirect_to root_path
   end
 
@@ -14,13 +14,12 @@ class UsersController < ApplicationController
     @user = User.new user_params
     if @user.save
       log_in @user
-      flash[:success] = "Success"
+      flash[:success] = t("controllers.users_controller.success")
       redirect_to @user
     else
       render :new
     end
   end
-
    def destroy
     @user = User.find_by id: params[:id]
     @user.destroy

@@ -1,35 +1,35 @@
 <div id="book_room">
   <div class="col-sm-10 well">
     <div class="header_book">
-      ĐẶT PHÒNG
+      <%= t ".br_title" %>
     </div>
   <div class="row">
     <div class="col-md-6 col-md-offset-3">
-      <%= form_for(Order.create, url: newbook_path) do |f| %>
+      <%= form_for Order.create, url: newbook_path do |f| %>
 
-        <%= f.label :date_start %>
+        <%= f.label t(".br_a") %>
         <%= f.date_field :date_start, class: "form-control" %>
 
-        <%= f.label :date_end %>
+        <%= f.label t(".br_b") %>
         <%= f.date_field :date_end, class: "form-control" %>
 
-        <%= f.label :number_person %>
+        <%= f.label t(".br_c") %>
         <%= f.number_field :number_person, class: "form-control" %>
 
-        <%= f.hidden_field :custom_id, :value => current_user.id %>
-        <%= f.hidden_field :room_id, :value => @room.id %>
-        <%= f.hidden_field :state, :value => "Chờ xác thực"%>
+        <%= f.hidden_field :custom_id, value: current_user.id %>
+        <%= f.hidden_field :room_id, value: @room.id %>
+        <%= f.hidden_field :state, value: "Chờ xác thực"%>
 
-        <%= f.label :number_bike %>
+        <%= f.label t(".br_d") %>
         <%= f.number_field :number_bike, class: "form-control" %>
 
-        <%= f.label :number_motobike %>
+        <%= f.label t(".br_e") %>
         <%= f.number_field :number_motobike, class: "form-control" %>
 
-        <%= f.label :description %>
+        <%= f.label t(".br_f") %>
         <%= f.text_field :description, class: "form-control" %>
 
-        <%= f.submit "Đặt phòng", class: "btn btn-primary" %>
+        <%= f.submit t(".br_submit") , class: "btn btn-primary" %>
       <% end %>
     </div>
   </div>
