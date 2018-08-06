@@ -29,8 +29,6 @@ class Admin::HomesController < ApplicationController
     end
   end
 
-  # PATCH/PUT /homes/1
-  # PATCH/PUT /homes/1.json
   def update
     respond_to do |format|
       if @home.update(home_params)
@@ -43,8 +41,6 @@ class Admin::HomesController < ApplicationController
     end
   end
 
-  # DELETE /homes/1
-  # DELETE /homes/1.json
   def destroy
     @home.destroy
     respond_to do |format|
@@ -58,7 +54,6 @@ class Admin::HomesController < ApplicationController
   end
 
   private
-    # Use callbacks to share common setup or constraints between actions.
     def set_home
       @home = home.find(params[:id])
     end
