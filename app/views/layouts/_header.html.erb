@@ -13,8 +13,12 @@
         <nav>
           <ul class="nav navbar-nav navbar-right">
             <% if logged_in? %>
-              <% if  (current_user.role == "owner") %>
-                <li><%= link_to "Quản lý hệ thống", admin_users_account_path %></li>
+              <% if (current_user.role == "admin") %>
+                <li><%= link_to "Quản lý hệ thống", admin_users_path %></li>
+              <% elsif (current_user.role == "owner") %>
+                <li><%= link_to "Quản lý hệ thống", admin_homes_path %></li>
+              <% else %>
+
               <% end %>
               <li><%= link_to "Users", "#" %></li>
               <li class="dropdown">

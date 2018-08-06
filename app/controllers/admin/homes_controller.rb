@@ -16,12 +16,12 @@ class Admin::HomesController < ApplicationController
   # POST /homes
   # POST /homes.json
   def create
-    @admin_home = admin_home.new(admin_home_params)
+    @admin_home = Home.new(admin_home_params)
 
     respond_to do |format|
       if @admin_home.save
-        format.html { redirect_to @admin_home, notice: 'home was successfully created.' }
-        format.json { render :show, status: :created, location: @admin_home }
+        format.html { redirect_to admin_homes_path, notice: 'home was successfully created.' }
+        format.json { render :show, status: :created, location: admin/homes }
       else
         format.html { render :new }
         format.json { render json: @admin_home.errors, status: :unprocessable_entity }
@@ -29,8 +29,6 @@ class Admin::HomesController < ApplicationController
     end
   end
 
-  # PATCH/PUT /homes/1
-  # PATCH/PUT /homes/1.json
   def update
     respond_to do |format|
       if @home.update(home_params)
@@ -43,8 +41,6 @@ class Admin::HomesController < ApplicationController
     end
   end
 
-  # DELETE /homes/1
-  # DELETE /homes/1.json
   def destroy
     @home.destroy
     respond_to do |format|
@@ -54,17 +50,40 @@ class Admin::HomesController < ApplicationController
   end
 
   def room
-    @rooms = Room.where(home_id: params[:id])
+    @home = Home.find_by id: params[:id]
+    @rooms = Room.where(home_id: params[:id]).page(params[:page]).per Settings.per_page
+  end
+
+  def new_room
+    @home = Home.find_by id: params[:id]
+    @admin_room = Room.new
+  end
+
+  def create_room
+    @admin_room = Room.new(admin_room_params)
+
+    respond_to do |format|
+      if @admin_room.save
+        format.html { redirect_to admin_homes_path, notice: 'home was successfully created.' }
+        format.json { render :show, status: :created, location: @admin_room }
+      else
+        format.html { render :new }
+        format.json { render json: @admin_home.errors, status: :unprocessable_entity }
+      end
+    end
   end
 
   private
-    # Use callbacks to share common setup or constraints between actions.
     def set_home
       @home = home.find(params[:id])
     end
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def admin_home_params
-      params.require(:home).permit(:address, :room_number, :room_empty, :description)
+      params.require(:home).permit(:address, :room_number, :room_empty, :description, :user_id)
+    end
+
+    def admin_room_params
+      params.require(:room).permit(:name, :area, :number_room, :state, :price, :description, :home_id, :image)
     end
 end

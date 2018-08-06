@@ -105,6 +105,7 @@ ActiveRecord::Schema.define(version: 2018_08_05_185401) do
     t.string "price"
     t.text "description"
     t.bigint "home_id"
+    t.string "image"
     t.index ["home_id"], name: "index_rooms_on_home_id"
   end
 

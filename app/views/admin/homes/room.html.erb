@@ -10,20 +10,21 @@
               <th>Name</th>
               <th>Area</th>
               <th>Number of rooms</th>
+              <th>Image</th>
               <th>State</th>
               <th>Tác vụ</th>
             </tr>
           </thead>
           <tbody>
-            <% if(@rooms.nil?) %>
+
             <%= paginate @rooms, theme: "twitter-bootstrap-3" %>
             <%= render partial: "room",  collection: @rooms, as: "room" %>
-            <% end %>
+
           </tbody>
         </table>
       </div>
     </div>
-    <button class="btn btn-success"><i class="fa fa-plus"> THÊM BÀI VIẾT</i></button>
+    <button class="btn btn-success"><i class="fa fa-plus"><%= link_to "ĐẶT PHÒNG", controller: "homes", action: "new_room", id: @home.id %></i></button>
     </div>
   </div>
   <hr />
