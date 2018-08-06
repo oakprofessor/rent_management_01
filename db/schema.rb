@@ -10,18 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-<<<<<<< HEAD
-ActiveRecord::Schema.define(version: 2018_08_05_185401) do
-
-  create_table "admin_home_demos", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
-    t.string "name"
-    t.integer "number_room"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-  end
-=======
 ActiveRecord::Schema.define(version: 2018_08_05_190802) do
->>>>>>> cb111c9cfde1620406383c372be66777eb416650
 
   create_table "facilities", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
     t.string "name"
@@ -38,21 +27,6 @@ ActiveRecord::Schema.define(version: 2018_08_05_190802) do
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.index ["user_id"], name: "index_homes_on_user_id"
-  end
-
-  create_table "migrations", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
-    t.string "orders"
-    t.bigint "room_id"
-    t.integer "owner_id"
-    t.integer "customer_id"
-    t.date "date_start"
-    t.string "date_end"
-    t.string "date"
-    t.string "state"
-    t.string "description"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-    t.index ["room_id"], name: "index_migrations_on_room_id"
   end
 
   create_table "orders", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
@@ -155,7 +129,6 @@ ActiveRecord::Schema.define(version: 2018_08_05_190802) do
   end
 
   add_foreign_key "homes", "users"
-  add_foreign_key "migrations", "rooms"
   add_foreign_key "orders", "rooms"
   add_foreign_key "photos", "rooms"
   add_foreign_key "role_users", "roles"

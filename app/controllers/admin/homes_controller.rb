@@ -16,7 +16,7 @@ class Admin::HomesController < ApplicationController
   # POST /homes
   # POST /homes.json
   def create
-    @admin_home = admin_home.new(admin_home_params)
+    @admin_home = Home.new(admin_home_params)
 
     respond_to do |format|
       if @admin_home.save
@@ -65,6 +65,6 @@ class Admin::HomesController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def admin_home_params
-      params.require(:home).permit(:address, :room_number, :room_empty, :description)
+      params.require(:home).permit(:address, :room_number, :room_empty, :description, :user_id)
     end
 end

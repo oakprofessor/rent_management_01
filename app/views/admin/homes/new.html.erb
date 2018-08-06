@@ -22,6 +22,8 @@
     <%= form.number_field :room_number %>
   </div>
 
+  <%= form.hidden_field :user_id, :value => current_user.id%>
+
   <div class="field">
     <%= form.label :room_empty %>
     <%= form.number_field :room_empty %>

@@ -16,7 +16,7 @@
             </tr>
           </thead>
           <tbody>
-            <% if(@homes.nil?) %>
+            <% if(!@homes.nil?) %>
                 <%= paginate @homes, theme: "twitter-bootstrap-3" %>
                 <%= render partial: "home",  collection: @homes, as: "home" %>
             <% end %>
