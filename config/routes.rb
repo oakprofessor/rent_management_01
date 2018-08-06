@@ -1,22 +1,10 @@
 Rails.application.routes.draw do
-  namespace :admin do
-    get 'orders/admin_order'
-    get 'orders/owner_order'
-    get 'homes/room/:id', to: "homes#room"
-    get "homes/new_room/:id", to: "homes#new_room"
-    resources :homes
-    post "homes/create_room",  to: "homes#create_room"
-
-
-    resources :users
-    resources :orders
-  end
+  root "static_pages#home"
   get "/order", to: "orders#index"
   get  "/room/:id", to: "rooms#show"
   post "/newbook", to: "orders#create"
   get "admin/account"
   get "admin/index"
-  root "static_pages#home"
   get "home", to: "static_pages#home"
   get  "/room", to: "rooms#index"
   get  "/room/:id", to: "rooms#show"
@@ -31,4 +19,16 @@ Rails.application.routes.draw do
   delete "/logout", to: "sessions#destroy"
   resources :users
   resources :orders
+  namespace :admin do
+    get 'orders/admin_order'
+    get 'orders/owner_order'
+    get 'homes/room/:id', to: "homes#room"
+    get "homes/new_room/:id", to: "homes#new_room"
+    resources :homes
+    post "homes/create_room",  to: "homes#create_room"
+
+
+    resources :users
+    resources :orders
+  end
 end
