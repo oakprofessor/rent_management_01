@@ -2,6 +2,10 @@
   <td><%= room.name%></td>
   <td><%= room.area %></td>
   <td><%= room.number_room %></td>
+  <td><% if(!room.image.thumb.url.nil?)%>
+    <%= image_tag(room.image.thumb.url, size: "100x100") %>
+    <%end%></td>
   <td><%= room.state %></td>
-  <td><%= link_to 'Delete', home, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+
+  <td></td>
 </tr>

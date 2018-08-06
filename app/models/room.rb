@@ -4,6 +4,7 @@ class Room < ApplicationRecord
   has_many :orders
   has_many :photos, dependent: :destroy
 
+  mount_uploader :image, ImageUploader
 
   validates :name, presence: true
   validates :state, presence: true
