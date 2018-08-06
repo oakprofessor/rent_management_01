@@ -1,6 +1,6 @@
 class OrdersController < ApplicationController
   def index
-    @orders = Order.all.page(params[:page]).per 3
+    @orders = Order.where(customer_id: current_user.id ).page(params[:page]).per 3
   end
 
   def new
@@ -10,18 +10,20 @@ class OrdersController < ApplicationController
   def create
     @order = Order.new order_params
     if @order.save
-      flash[:success] = "Success"
+      flash[:success] = "Đặt phòng thành công"
       redirect_to @order
     else
       render :new
     end
   end
-
+  def show
+    @order = Order.find_by id: params[:id]
+  end
   private
 
   def order_params
     params.require(:order).permit :room_id, :customer_id, :owner_id, :date_start, :date_end, :number_person, :address,
-      :number_bike, :number_motobike, :description, :state
+      :state, :number_bike, :number_motobike, :description
   end
 
   end

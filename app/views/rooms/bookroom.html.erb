@@ -16,9 +16,10 @@
         <%= f.label :number_person %>
         <%= f.number_field :number_person, class: "form-control" %>
 
-        <%= f.hidden_field :custom_id, :value => current_user.id %>
+        <%= f.hidden_field :customer_id, :value => current_user.id %>
         <%= f.hidden_field :room_id, :value => @room.id %>
-        <%= f.hidden_field :state, :value => "Chờ xác thực"%>
+        <% state = "Chờ xác thực"%>
+        <%= f.hidden_field :state, :value => state %>
 
         <%= f.label :number_bike %>
         <%= f.number_field :number_bike, class: "form-control" %>

@@ -9,6 +9,7 @@ Rails.application.routes.draw do
     resources :orders
   end
   get "/order", to: "orders#index"
+  get  "/room/:id", to: "rooms#show"
   post "/newbook", to: "orders#create"
   get "admin/account"
   get "admin/index"
