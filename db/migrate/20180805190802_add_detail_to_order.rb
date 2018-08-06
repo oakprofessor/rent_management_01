@@ -1,4 +1,4 @@
-class AddDetailToOrders < ActiveRecord::Migration[5.2]
+class AddDetailToOrder < ActiveRecord::Migration[5.2]
   def change
     add_column :orders, :number_person, :integer
     add_column :orders, :number_bike, :integer

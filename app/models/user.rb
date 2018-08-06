@@ -2,7 +2,6 @@ class User < ApplicationRecord
   attr_accessor :remember_token
   has_many :homes
   has_many :role_users
-  has_many :orders
 
   before_save{self.email = email.downcase}
   validates :name,  presence: true,

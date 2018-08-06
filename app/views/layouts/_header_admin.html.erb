@@ -4,7 +4,6 @@
       <div class="container">
         <nav>
           <ul class="nav navbar-nav navbar-left">
-            <li><span class="glyphicon glyphicon-envelope"></span></li>
             <li><a href="#" style="font-size: 20px; font-weight: bold">QUẢN TRỊ HỆ THỐNG</a></li>
           </ul>
         </nav>
@@ -14,13 +13,12 @@
             <li><%= link_to "Trang chủ", root_path %></li>
             <li><span class="glyphicon glyphicon-log-in"></span></li>
             <li><a href="#"><%= t ".log_in" %></a></li>
-            <li class="dropdown">
-              <a href="#" class="dropdown-toggle" data-toggle="dropdown">
-                <%= t ".language" %> <b class="caret"></b>
-              </a>
-              <ul class="dropdown-menu">
-                <%= link_to t(:english), locale:"en" %>
-                <%= link_to t(:vietnamese), locale:"vi" %>
+            <li>
+              <button class="btn btn-default dropdown-toggle" type="button" id="menu1" data-toggle="dropdown"><%= t ".language" %>
+                <span class="caret"></span></button>
+              <ul class="dropdown-menu" role="menu" aria-labelledby="menu1">
+                <li role="presentation"><%= link_to t(:english), locale:"en" %></li>
+                <li role="presentation"><%= link_to t(:vietnamese), locale:"vi" %></li>
               </ul>
             </li>
           </ul>

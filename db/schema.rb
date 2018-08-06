@@ -10,14 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2018_08_05_092138) do
-
-  create_table "admin_home_demos", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
-    t.string "name"
-    t.integer "number_room"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-  end
+ActiveRecord::Schema.define(version: 2018_08_05_190802) do
 
   create_table "facilities", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
     t.string "name"
@@ -41,7 +34,8 @@ ActiveRecord::Schema.define(version: 2018_08_05_092138) do
     t.integer "owner_id"
     t.integer "customer_id"
     t.date "date_start"
-    t.date "date_end"
+    t.string "date_end"
+    t.string "date"
     t.string "state"
     t.string "description"
     t.datetime "created_at", null: false
@@ -49,8 +43,6 @@ ActiveRecord::Schema.define(version: 2018_08_05_092138) do
     t.integer "number_person"
     t.integer "number_bike"
     t.integer "number_motobike"
-    t.index ["customer_id"], name: "index_orders_on_customer_id"
-    t.index ["owner_id"], name: "index_orders_on_owner_id"
     t.index ["room_id"], name: "index_orders_on_room_id"
   end
 

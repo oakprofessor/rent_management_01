@@ -1,8 +1,11 @@
 Rails.application.routes.draw do
   namespace :admin do
     get "users/account"
+    get "/admin/users/account", to: "admin/users#account"
+    resources :admin
   end
-  get "orders/new"
+  get "/order", to: "orders#index"
+  post "/newbook", to: "orders#create"
   get "admin/account"
   get "admin/index"
   root "static_pages#home"
@@ -19,4 +22,5 @@ Rails.application.routes.draw do
   post "/login", to: "sessions#create"
   delete "/logout", to: "sessions#destroy"
   resources :users
+  resources :orders
 end
