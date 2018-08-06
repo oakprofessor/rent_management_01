@@ -8,7 +8,8 @@ Rails.application.routes.draw do
     resources :users
     resources :orders
   end
-  get "orders/new"
+  get "/order", to: "orders#index"
+  post "/newbook", to: "orders#create"
   get "admin/account"
   get "admin/index"
   root "static_pages#home"
@@ -25,4 +26,5 @@ Rails.application.routes.draw do
   post "/login", to: "sessions#create"
   delete "/logout", to: "sessions#destroy"
   resources :users
+  resources :orders
 end

@@ -7,8 +7,11 @@
   ]
 end
 %>
-<h1>Sign up</h1>
-<div class="well" id="login">
+<div id="login">
+  <div class="col-sm-10 well">
+    <div class="header_login">
+      ĐĂNG KÍ
+    </div>
   <div class="row">
     <div class="col-md-6 col-md-offset-3">
       <%= form_for(@user, url: signup_path) do |f| %>
@@ -41,9 +44,12 @@ end
         <%= f.label :role %>
         <%= f.select :role, options_for_status, {}, prompt: 'Chọn vai trò' %>
 
+        <%= f.hidden_field(:user, :value => params[:role]) %>
+
         <%= f.submit "Create my account", class: "btn btn-primary" %>
       <% end %>
     </div>
+  </div>
   </div>
 </div>
 

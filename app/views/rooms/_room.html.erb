@@ -26,8 +26,15 @@
           </div>
         </div>
       </div>
-      <button class="btn submit"><span class="glyphicon glyphicon-check"></span><%= link_to "Đặt phòng", controller: "rooms", action: "bookroom", id: room.id %></button>
-      <button class="btn detail"><span class="glyphicon glyphicon-th-list"></span><%= link_to "Chi tiết", controller: "rooms", action: "show", id: room.id %></button>
+      <button class="btn submit"><span class="glyphicon glyphicon-check"></span><%= if logged_in? 
+        (link_to "Đặt phòng", controller: "rooms", action: "bookroom", id: room.id)
+        else (link_to "Đặt phòng", controller: "sessions", action: "create") 
+        end %></button>
+      <button class="btn detail"><span class="glyphicon glyphicon-th-list"></span><%= if logged_in? 
+        (link_to "Chi tiết", controller: "rooms", action: "show", id: room.id) 
+        else (link_to "Chi tiết", controller: "sessions", action: "create") 
+        end %>
+      </button>
     </div>
   </div>
 </div>

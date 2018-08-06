@@ -145,6 +145,10 @@ body{
 }
 #home .col-sm-9 .well{
   height: 110px;
+  padding: 0;
+}
+#home .col-sm-9 .row{
+  width: 440px;
 }
 #home .ct p{
   width: 440px;
@@ -347,7 +351,7 @@ body{
 
 //Tạo page Room
 #room{
-  height: 1980px;
+  height: auto;
   z-index: 1;
   margin-top: 50px;
 }
@@ -385,7 +389,7 @@ body{
   width: 100px;
   float: left;
   background-color: white;
-  height: 150px;
+  height: 120px;
 }
 #room .labelPost label{
   margin-left: 3px;
@@ -406,10 +410,6 @@ body{
   padding-top: 4px;
   margin-left: 5px;
   border-bottom: 0.7px solid $color_border_menu_bar;
-}
-#room .contentPost .btn-md{
-  margin-top: 8px;
-  margin-left: 440px;
 }
 #room .contentPost .glyphicon-check{
   width:30px;
@@ -458,11 +458,11 @@ body{
   background: #4CAF50;
   margin-right: 10px;
 }
-
-#room .details .col-sm-10{
-  margin-left: 9%;
+#room .details{
+  height: 500px;
 }
 #room .details .header_detail{
+  margin-left: 2%;
   width: 110px;
   height: 40px;
   border-radius: 5%;
@@ -486,8 +486,53 @@ body{
   transform: scale(1,1);
 
 }
+#room .details .col-sm-8{
+  margin-top: 5%;
+}
+#room .details .col-sm-8 .well{
+  width: 650px;
+  height: 270px;
+  margin-left: 40px;
+}
 
-#room .imgPost{
+#room .details .list-product .row{
+  margin: 0;
+  margin-top: 5px;
+}
+#room .details .contentPost{
+  width: 480px;
+  height: 200px;
+  float: right;
+}
+#room .details .labelPost{
+  width: 100px;
+  float: left;
+  background-color: white;
+  height: 200px;
+}
+#room .details .labelPost label{
+  margin-left: 3px;
+  margin-top: 3px;
+  padding-top: 4px;
+  width: 60px;
+  height: 31px;
+  border-bottom: 1px solid $color_border_menu_bar;
+}
+#room .details .contentPost .list-product{
+  background-color: white;
+  height: 200px;
+  overflow: hidden;
+}
+#room .details .contentPost .list-product .row{
+  height: 32px;
+  padding-left: 20px;
+  padding-top: 4px;
+  margin-left: 5px;
+  border-bottom: 0.7px solid $color_border_menu_bar;
+}
+
+
+#room .details .imgPost{
   position: relative;
   width: 300px;
   height: 250px;
@@ -498,7 +543,7 @@ body{
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.3), 0 6px 20px 0 rgba(0, 0, 0, 0.3);
 }
 
-#room .col-sm-3:hover img{
+#room .details .col-sm-4:hover img{
   transform: scale(1.2,1.2);
   opacity: 0.95;
 }
@@ -562,6 +607,27 @@ body{
   background-color: $color_scoll_select;
   padding: 20px;
 }
+#login {
+  height: 800px;
+}
+
+#login .col-sm-10{
+  margin-left: 8%;
+}
+#login .col-sm-10 .header_login{
+  margin-left: 45%;
+  width: 110px;
+  height: 40px;
+  border-radius: 5%;
+  background-color: #2D92BE;
+  color: white;
+  font-size: 20px;
+  padding-left: 10px;
+  padding-top: 6px;
+}
+#login .col-md-6 {
+  margin-top: 4%;
+}
 
 #login .checkbox {
   margin-bottom: 10px;
@@ -570,7 +636,10 @@ body{
     font-weight: normal;
   }
 }
-
+#login label{
+  font-size: 16px;
+  margin-top: 2%;
+}
 #login p{
   margin: 15px 0;
 }
@@ -578,7 +647,66 @@ body{
   width: auto;
   margin-left: 0;
 }
+#signup{
+  height: 500px;
+}
+#signup .col-sm-10{
+  margin-left: 8%;
+}
+#signup .header_signup{
+  margin-left: 45%;
+  width: 140px;
+  height: 40px;
+  border-radius: 5%;
+  background-color: #2D92BE;
+  color: white;
+  font-size: 20px;
+  padding-left: 10px;
+  padding-top: 6px;
+}
 
+#signup .col-md-6 {
+  margin-top: 4%;
+}
+#signup label{
+  font-size: 16px;
+  margin-top: 2%;
+}
+#signup span{
+  font-size: 15px;
+  margin-left: 3%;
+}
+
+#book_room{
+  height: 800px;
+}
+
+#book_room .header_book{
+  margin-left: 45%;
+  width: 140px;
+  height: 40px;
+  border-radius: 5%;
+  background-color: #2D92BE;
+  color: white;
+  font-size: 20px;
+  padding-left: 10px;
+  padding-top: 6px;
+}
+
+#book_room .col-sm-10{
+  margin-left: 8%;
+}
+#book_room .col-md-6 {
+  margin-top: 4%;
+}
+#book_room label{
+  font-size: 16px;
+  margin-top: 2%;
+}
+
+#book_room .btn-primary{
+  margin-top: 3%;
+}
 /* Fixed sidenav, full height */
 #admin .sidenav {
   margin-top: 59px;
