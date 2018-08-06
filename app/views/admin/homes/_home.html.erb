@@ -1,0 +1,8 @@
+<tr>
+  <td><%= home.address%></td>
+  <td><%= home.room_number %></td>
+  <td><%= home.room_empty %></td>
+  <td><%= home.description %></td>
+  <td><%= link_to "Chi tiết phòng", controller: "homes", action: "room", id: home.id %></td>
+  <td><%= link_to 'Delete', home, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+</tr>

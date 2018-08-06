@@ -1,0 +1,29 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  room: one
+  owner_id: 1
+  customer_id: 1
+<<<<<<< HEAD
+  date_start: 2018-08-05
+=======
+  date_start: 2018-08-06
+>>>>>>> cb111c9cfde1620406383c372be66777eb416650
+  date_end: MyString
+  date: MyString
+  state: MyString
+  description: MyString
+
+two:
+  room: two
+  owner_id: 1
+  customer_id: 1
+<<<<<<< HEAD
+  date_start: 2018-08-05
+=======
+  date_start: 2018-08-06
+>>>>>>> cb111c9cfde1620406383c372be66777eb416650
+  date_end: MyString
+  date: MyString
+  state: MyString
+  description: MyString

@@ -1,0 +1,9 @@
+<tr>
+  <td><%= admin_user.name%></td>
+  <td><%= admin_user.phone %></td>
+  <td><%= admin_user.email %></td>
+  <td><%= admin_user.address %></td>
+  <td><%= admin_user.stk %></td>
+  <td><%= admin_user.role %></td>
+  <td><%= link_to 'delete', admin_user, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+</tr>

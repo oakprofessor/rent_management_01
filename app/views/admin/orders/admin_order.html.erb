@@ -1,0 +1,27 @@
+<div id="page-inner">
+  <div class="row">
+    <div class="col-lg-12">
+    <div class="panel panel-primary">
+      <div class="panel-heading"><i class="fa fa-list"></i> DANH SÁCH ORDER</div>
+      <div class="panel-body">
+        <table class="table table-bordered">
+          <thead>
+            <tr>
+              <th>User</th>
+              <th>Order</th>
+              <th>State</th>
+            </tr>
+          </thead>
+          <tbody>
+            <% if(@admin_orders.nil?) %>
+                <%= paginate @admin_orders, theme: "twitter-bootstrap-3" %>
+                <%= render partial: "admin_order",  collection: @admin_orders, as: "admin_order" %>
+            <% end %>
+          </tbody>
+        </table>
+      </div>
+    </div>
+    </div>
+  </div>
+  <hr />
+</div>
