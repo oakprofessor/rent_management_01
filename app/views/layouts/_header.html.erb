@@ -15,7 +15,7 @@
             <% if logged_in? %>
               <% if  (current_user.role == "admin") %>
                 <li><%= link_to "Quản lý hệ thống", admin_users_path %></li>
-              <% else %>
+              <% elseif (current_user.role == "owner") %>
                 <li><%= link_to "Quản lý hệ thống", admin_homes_path %></li>
               <% end %>
               <li><%= link_to "Users", "#" %></li>
