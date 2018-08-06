@@ -2,7 +2,7 @@
 <%= form_for @admin_room, url: admin_homes_create_room_path, html: { multipart: true } do |form| %>
   <% if @admin_room.errors.any? %>
     <div id="error_explanation">
-      <h2><%= pluralize(@admin_room.errors.count, "error") %> prohibited this admin_home from being saved:</h2>
+      <h2><%= pluralize(@admin_room.errors.count, t(".nr_error")) %> <%= t(".n_i") %></h2>
 
       <ul>
       <% @admin_room.errors.full_messages.each do |message| %>
@@ -13,17 +13,17 @@
   <% end %>
 
  <div class="field">
-    <%= form.label :name %>
+    <%= form.label t(".nr_a") %>
     <%= form.text_field :name %>
   </div>
 
   <div class="field">
-    <%= form.label :area %>
+    <%= form.label t(".nr_b") %>
     <%= form.number_field :area %>
   </div>
 
   <div class="field">
-    <%= form.label :number_room %>
+    <%= form.label t(".nr_c") %>
     <%= form.number_field :number_room %>
   </div>
 
@@ -31,27 +31,27 @@
   <%= form.hidden_field :home_id, :value => @home.id%>
 
   <div class="field">
-    <%= form.label :state %>
+    <%= form.label t(".nr_d") %>
     <%= form.text_field :state %>
   </div>
 
   <div class="field">
-    <%= form.label :price %>
+    <%= form.label t(".nr_e") %>
     <%= form.number_field :price %>
   </div>
   <div class="field">
-    <%= form.label :description %>
+    <%= form.label t(".nr_f") %>
     <%= form.text_area :description %>
   </div>
 
   <div class="field">
-    <%= form.label :image %>
+    <%= form.label t(".nr_g") %>
     <%= form.file_field :image %>
   </div>
 
 
   <div class="actions">
-    <%= form.submit %>
+    <%= form.submit t(".nr_h") %>
   </div>
 <% end %>
 

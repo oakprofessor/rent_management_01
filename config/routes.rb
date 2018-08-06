@@ -1,8 +1,8 @@
 Rails.application.routes.draw do
   namespace :admin do
-    get 'orders/admin_order'
-    get 'orders/owner_order'
-    get 'homes/room/:id', to: "homes#room"
+    get "orders/admin_order"
+    get "orders/owner_order"
+    get "homes/room/:id", to: "homes#room"
     get "homes/new_room/:id", to: "homes#new_room"
     resources :homes
     post "homes/create_room",  to: "homes#create_room"

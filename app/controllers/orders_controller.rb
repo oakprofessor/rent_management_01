@@ -10,7 +10,7 @@ class OrdersController < ApplicationController
   def create
     @order = Order.new order_params
     if @order.save
-      flash[:success] = "Success"
+      flash[:success] = t("controllers.orders_controller.success")
       redirect_to @order
     else
       render :new
@@ -25,4 +25,4 @@ class OrdersController < ApplicationController
   end
 
   end
-  
+

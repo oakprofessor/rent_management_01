@@ -1,4 +1,4 @@
-<% provide(:title, "Sign up") %>
+<% provide(:title, t(".user_title")) %>
 <%
     def options_for_status
   [
@@ -10,7 +10,7 @@ end
 <div id="login">
   <div class="col-sm-10 well">
     <div class="header_login">
-      ĐĂNG KÍ
+      <%= t ".user_title" %>
     </div>
   <div class="row">
     <div class="col-md-6 col-md-offset-3">
@@ -46,7 +46,7 @@ end
 
         <%= f.hidden_field(:user, :value => params[:role]) %>
 
-        <%= f.submit "Create my account", class: "btn btn-primary" %>
+        <%= f.submit t ".user_submit" , class: "btn btn-primary" %>
       <% end %>
     </div>
   </div>
