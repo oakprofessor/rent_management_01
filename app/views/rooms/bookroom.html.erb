@@ -16,16 +16,11 @@
         <%= f.label t(".br_c") %>
         <%= f.number_field :number_person, class: "form-control" %>
 
-<<<<<<< HEAD
         <%= f.hidden_field :customer_id, :value => current_user.id %>
         <%= f.hidden_field :room_id, :value => @room.id %>
         <% state = "Chờ xác thực"%>
         <%= f.hidden_field :state, :value => state %>
-=======
-        <%= f.hidden_field :custom_id, value: current_user.id %>
-        <%= f.hidden_field :room_id, value: @room.id %>
-        <%= f.hidden_field :state, value: "Chờ xác thực"%>
->>>>>>> 459679a6e73b5449822d0db2de7244be0aa4b654
+
 
         <%= f.label t(".br_d") %>
         <%= f.number_field :number_bike, class: "form-control" %>
