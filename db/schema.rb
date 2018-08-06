@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2018_08_05_185401) do
+ActiveRecord::Schema.define(version: 2018_08_06_035258) do
 
   create_table "facilities", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
     t.string "name"
@@ -27,23 +27,6 @@ ActiveRecord::Schema.define(version: 2018_08_05_185401) do
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.index ["user_id"], name: "index_homes_on_user_id"
-  end
-
-  create_table "orders", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
-    t.bigint "room_id"
-    t.integer "owner_id"
-    t.integer "customer_id"
-    t.date "date_start"
-    t.string "date_end"
-    t.string "date"
-    t.string "state"
-    t.string "description"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-    t.integer "number_person"
-    t.integer "number_bike"
-    t.integer "number_motobike"
-    t.index ["room_id"], name: "index_orders_on_room_id"
   end
 
   create_table "photos", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
@@ -130,7 +113,6 @@ ActiveRecord::Schema.define(version: 2018_08_05_185401) do
   end
 
   add_foreign_key "homes", "users"
-  add_foreign_key "orders", "rooms"
   add_foreign_key "photos", "rooms"
   add_foreign_key "role_users", "roles"
   add_foreign_key "role_users", "users"
