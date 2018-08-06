@@ -3,7 +3,7 @@
     <div class="row details">
       <div class="col-sm-12 well">
         <div class="header_detail">
-            CHI TIẾT
+          <%= t ".show_title" %>
         </div>
         <div class="row">
           <div class="col-sm-4" >
@@ -15,11 +15,11 @@
             <div class="well">
               <div class="labelPost">
                 <%= form_for :room do |f| %>
-                  <%= f.label :Name %>
-                  <%= f.label :Address %>
-                  <%= f.label :Area %>
-                  <%= f.label :Numberroom %>
-                  <%= f.label :Price %>
+                  <%= f.label t(".show_a") %>
+                  <%= f.label t(".show_b") %>
+                  <%= f.label t(".show_c") %>
+                  <%= f.label t(".show_d") %>
+                  <%= f.label t(".show_e") %>
                 <% end %>
               </div>
               <div class="contentPost">
@@ -42,7 +42,7 @@
                   </div>
                 </div>
               </div>
-              <button class="btn submit"><span class="glyphicon glyphicon-check"></span><%= link_to "Đặt phòng", controller: "rooms", action: "bookroom", id: @room.id %></button>
+              <button class="btn submit"><span class="glyphicon glyphicon-check"></span><%= link_to t(".show_set"), controller: "rooms", action: "bookroom", id: @room.id %></button>
             </div>
           </div>
         </div>
