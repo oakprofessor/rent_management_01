@@ -2,6 +2,7 @@ $(document).ready(function(){
   var navi = $('.sticky-top').offset();
   var na = navi.top;
   var slideIndex = 0;
+
   showSlides();
   function showSlides() {
     var i;
@@ -19,14 +20,11 @@ $(document).ready(function(){
     dots[slideIndex-1].className += ' active';
     setTimeout(showSlides, 2000);
   }
-  function openSearch() {
-    document.getElementById("myOverlay").style.display = "block";
-  }
-  
-  // Close the full screen search box 
-  function closeSearch() {
-    document.getElementById("myOverlay").style.display = "none";
-  }
+  $(".btn-primary").click(function(){
+    if($("#order").attr("stt") == "order"){
+       alert("123");
+    }
+  });
     var sticky = function(){
       var scroll = $(window).scrollTop();
       if(scroll > na){
