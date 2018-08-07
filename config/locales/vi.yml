@@ -35,6 +35,90 @@ vi:
       foot_switchboard: "Tổng đầi: 1900 9999"
       foot_address: "Địa chỉ: 334 Nguyễn Trãi, Thanh Xuân, Hà Nội"
       foot_license: "Giấy phép đăng ký kinh doanh số 26072018 do Sở kế hoạch và Đầu tư thành phố Hà Nội cấp ngày 26 tháng 7 năm 2018."
+    admin:
+      ad_home: "Trang chủ"
+      ad_a: "Quản lý tài khoản"
+      ad_b: "Quản lý phòng trọ"
+      ad_c: "Quản lý đơn đặt phòng"
+  admin:
+    homes:
+      home:
+        h_a: "Chi tiết phòng"
+        h_b: "Xóa"
+        h_c: "Bạn chắc chứ?"
+      edit:
+        e_a: "Hiển thị"
+        e_b: "Quay lại"
+      form:
+        f_a: "Địa chỉ"
+        f_b: "Phòng số"
+        f_c: "Phòng trống"
+        f_d: "Mô tả"
+        f_e: "Xác nhận"
+        f_error: "lỗi"
+        f_f: "ngăn cản chủ nhà trong việc lưu lại"
+      new_room:
+        nr_a: "Tên"
+        nr_b: "Diện tích"
+        nr_c: "Sốphòng"
+        nr_d: "Trạng thái"
+        nr_e: "Gía"
+        nr_f: "Mô tả"
+        nr_g: "Ảnh"
+        nr_h: "Xác nhận"
+        nr_erroe: "lỗi"
+        nr_i: "ngăn cản chủ nhà trong việc lưu lại"
+      new:
+        n_title: "Nhà mớii"
+        n_a: "Địa chỉ"
+        n_b: "Số phòng"
+        n_c: "Phòng trống"
+        n_d: "Mô tả"
+        n_e: "Tạo phòng"
+        n_error: "lỗi"
+        n_f: "ngăn cản chủ nhà trong việc lưu lại"
+      index:
+        in_title: "DANH SÁCH KHU TRO"
+        in_a: "Địa chỉ"
+        in_b: "Số phòng"
+        in_c: "Phòng trống"
+        in_d: "Mô tả"
+        in_e: "Chi tiết phòng"
+        in_f: "Tác vụ"
+        in_g: "THÊM KHU TRỌ"
+      room:
+        r_title: "DANH SÁCH TÀI KHOẢN"
+        r_a: "Tên"
+        r_b: "Diện tích"
+        r_c: "Số phòng"
+        r_d: "Ảnh"
+        r_e: "Tình trạng"
+        r_f: "Tác vụ"
+        r_g: "ĐẶT PHÒNG"
+    orders:
+      admin_order:
+        ad_title: "DANH SÁCH ĐƠN ĐẶT HÀNG"
+        ad_a: "Người dùng"
+        ad_b: "Đơn đặt hàng"
+        ad_c: "Trạng thái"
+      owner_order:
+        o_title: "DANH SÁCH ĐƠN ĐẶT HÀNG"
+        o_a: "Khách hàng"
+        o_b: "Phòng"
+        o_c: "Trạng thái"
+        o_d: "Ngày bắt đầu"
+        o_e: "Ngày kết thúc"
+    users:
+      index:
+        in_title: "DANH SÁCH TÀI KHOẢN"
+        in_a: "Tên"
+        in_b: "Điện thoại"
+        in_c: "Email"
+        in_d: "Địa chỉ"
+        in_e: "Số tài khoản"
+        in_f: "Vai trò"
+        in_g: "Tác vụ"
+        in_add: "THÊM BÀI VIẾT"
   rooms:
     room:
       room_a: "Chi tiết"
@@ -120,6 +204,7 @@ vi:
       ct_write: "Viết gì đó.."
     home:
       sharoom: "ShaRoom"
+      home_see: "Xem thêm..."
       home_board: "Quên mất là tôi đã đề cập đến cái gì đó về ại đó với ai đó về việc tôi quên cái gì đó, nhưng bây giờ tôi quên nó. À, quên nó đi! Đợi đã. Tôi nhớ ra rồi .... không, tôi không nhớ."
       home_rooma: "Phòng trọ"
       home_roomb: "thường"
@@ -132,8 +217,8 @@ vi:
       home_two: "Hai"
       home_three: "Ba"
       home_hot: "Tin nóng"
-      home_hota: "Tiền nhà giảm 20% trong tháng 8"
-      home_hotb: "Giá điện tăng sau lũ"
+      home_hota: "Con gà trống đạp gà mái"
+      home_hotb: "Con mèo"
       home_choose: "Chọn quận/huyện"
       home_a: "Quận Ba Đình"
       home_b: "Quận Hoàn Kiếm"
@@ -189,6 +274,16 @@ vi:
               too_short: "quá ngắn"
             password_confirmation:
               confirmation: "không khớp mật khẩu đã chọn"
+        home:
+          attributes:
+            address:
+              blank: "không thể để trống"
+            room_number:
+              blank: "không thể để trống"
+              not_a_number: "không phải kiểu số"
+            room_empty:
+              blank: "không thể để trống"
+              not_a_number: "không phải kiểu số"
     attributes:
       user:
         name: "Tên"
@@ -218,6 +313,20 @@ vi:
       user_a: "Chủ nhà"
       user_b: "Khách thuê"
   controllers:
+    orders_controller:
+      success: "Thành công"
     users_controller:
       success: "Chào mừng đến với ShaRoom!"
       danger: "Không tìm thấy người dùng"
+    admin:
+      homes_controller:
+        create: "khu trọ được tạo thành công."
+        update: "khu trọ cập nhật thành công."
+        destroy: "khu trọ bị hủy thành công."
+views:
+    pagination:
+      first: "« Đầu tiên"
+      last: "Cuối cùng »"
+      previous: "‹ Trước"
+      next: "Tiếp ›"
+      truncate: "..."
