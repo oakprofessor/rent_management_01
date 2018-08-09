@@ -15,7 +15,6 @@ gem "jbuilder", "~> 2.5"
 gem "jquery-rails", "4.3.1"
 gem "kaminari"
 gem "mini_magick", "4.7.0"
-gem "mysql2", "0.5.2"
 gem "puma", "~> 3.11"
 gem "rails", "~> 5.2.0"
 gem "rubocop", "~> 0.54.0", require: false
@@ -29,6 +28,7 @@ end
 
 group :development do
   gem "listen", ">= 3.0.5", "< 3.2"
+  gem "mysql2", "0.5.2"
   gem "spring"
   gem "spring-watcher-listen", "~> 2.0.0"
   gem "web-console", ">= 3.3.0"
@@ -38,6 +38,10 @@ group :test do
   gem "capybara", ">= 2.15", "< 4.0"
   gem "chromedriver-helper"
   gem "selenium-webdriver"
+end
+
+group :production do
+  gem "pg"
 end
 
 gem "tzinfo-data", platforms: [:mingw, :mswin, :x64_mingw, :jruby]
