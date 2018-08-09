@@ -1,10 +1,11 @@
 class OrdersController < ApplicationController
+
   def index
     @orders = Order.where(customer_id: current_user.id ).page(params[:page]).per 3
   end
 
   def new
-    @order = order.new
+    @order = Order.new
   end
 
   def create

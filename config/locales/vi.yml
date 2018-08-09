@@ -124,7 +124,7 @@ vi:
       room_a: "Chi tiết"
       room_b: "Đặt phòng"
       room_c: "Diện tích"
-      room_d: "Sốphòng"
+      room_d: "Số phòng"
       room_e: "Gía tiền"
     bookroom:
       br_title: "ĐẶT PHÒNG"
