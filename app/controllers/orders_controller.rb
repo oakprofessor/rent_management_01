@@ -11,13 +11,13 @@ class OrdersController < ApplicationController
   def create
     @order = Order.new order_params
     if @order.save
-      flash[:success] = "Đặt phòng thành công"
-      redirect_to @order
+      render :show
     else
       render :new
     end
   end
   def show
+    flash[:success] = "Đặt phòng thành công"
     @order = Order.find_by id: params[:id]
   end
   private
@@ -27,5 +27,5 @@ class OrdersController < ApplicationController
       :state, :number_bike, :number_motobike, :description
   end
 
-  end
+end
 

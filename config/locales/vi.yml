@@ -247,7 +247,10 @@ vi:
       home_y: "Huyện Phú Xuyên"
       home_z: "Huyện Mê Linh"
   shared:
-    error_messages:
+    error_messages_users:
+      shared_contenta: "Biểu mẫu chứa"
+      shared_contentb: "lỗi"
+    error_messages_bookrooms:
       shared_contenta: "Biểu mẫu chứa"
       shared_contentb: "lỗi"
   activerecord:

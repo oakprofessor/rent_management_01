@@ -162,7 +162,10 @@ en:
       home_y: "Phu Xuyen District"
       home_z: "Me Linh District"
   shared:
-    error_messages:
+    error_messages_users:
+      shared_contenta: "The form contains"
+      shared_contentb: "error"
+    error_messages_bookrooms:
       shared_contenta: "The form contains"
       shared_contentb: "error"
   sessions:
