@@ -1,3 +1,7 @@
+<div id="login">
+  <div class="col-sm-10 well">
+    <div class="alert alert-info text-center">
+      THÊM KHU TRỌ MỚI
 <h1><%= t(".n_title") %></h1>
 <%= form_for @admin_home, url: admin_homes_path do |form| %>
   <% if @admin_home.errors.any? %>
@@ -10,7 +14,19 @@
       <% end %>
       </ul>
     </div>
-  <% end %>
+  <div class="row">
+      <%= form_for @admin_home, url: admin_homes_path do |form| %>
+      <% if @admin_home.errors.any? %>
+        <div id="error_explanation">
+          <h2><%= pluralize(@admin_home.errors.count, "error") %> prohibited this admin_home from being saved:</h2>
+
+          <ul>
+          <% @admin_home.errors.full_messages.each do |message| %>
+            <li><%= message %></li>
+          <% end %>
+          </ul>
+        </div>
+      <% end %>
 
   <div class="field">
     <%= form.label t(".n_a") %>
@@ -22,7 +38,7 @@
     <%= form.number_field :room_number %>
   </div>
 
-  <%= form.hidden_field :user_id, :value => current_user.id%>
+      <%= form.hidden_field :user_id, :value => current_user.id%>
 
   <div class="field">
     <%= form.label t(".n_c") %>
@@ -37,5 +53,6 @@
   <div class="actions">
     <%= form.submit t(".n_e")%>
   </div>
-<% end %>
+</div>
+
 

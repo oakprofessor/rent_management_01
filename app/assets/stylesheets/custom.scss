@@ -31,10 +31,27 @@ body{
 
 .ct-signup-login .glyphicon-globe{
   padding-right: 12px;
+  position: relative;
 }
 
 .ct-signup-login .glyphicon:hover{
   color: $color_item_header_hover;
+}
+.ct-signup-login .noty{
+  position: absolute;
+  top:7px;
+  left: 10px;
+  width: 10px;
+  height: 15px;
+  background-color: red;
+  display:inline-block;
+  border-radius: 25%;
+  z-index: 12;
+  color: aliceblue;
+  text-align: center;
+}
+.fi{
+  display: none;
 }
 .dropdown-toggle{
   margin-top: 6px;
@@ -68,7 +85,7 @@ body{
 .menu{
   padding: 7px 0;
   float: right;
-  width: 890px;
+  width: 950px;
 }
 
 .nav-menu{
@@ -217,13 +234,44 @@ body{
 }
 
 #home .col-sm-9 .well{
-	background-color:$color_item_header_hover;
+  background-color:$color_item_header_hover;
+  margin-left: 5%;
+  
 }
-
+#home .col-sm-1 {
+  height: 80px;
+  color: $color_footer;
+}
+#home .col-sm-1 .l1{
+  margin-left: 10px;
+  margin-top: 10px;
+  width:80px;
+  height: 30px;
+  border-bottom: 0.5px solid $color_scoll_select_text;
+}
+#home .col-sm-4{
+  height: 80px;
+  color: $color_footer;
+}
+#home .col-sm-4 .l2{
+  margin-top: 10px;
+  margin-left: 55%;
+  padding-left: 10%;
+ width: 350px;
+ height: 30px;
+ border-bottom: 0.5px solid $color_scoll_select_text;
+}
 #home .col-sm-3 .nav li{
   font-size: 10px;
 }
-
+#home .col-sm-9 .link{
+  margin-top: 7px;
+  margin-left: 10px;
+}
+#home .col-sm-9 .link1{
+margin-top: 85px;
+margin-left: 20px;
+}
 #home .select .title{
   width: 252px;
   height: 25px;
@@ -709,7 +757,7 @@ body{
 }
 /* Fixed sidenav, full height */
 #admin .sidenav {
-  margin-top: 59px;
+  margin-top: 120px;
   height: 100%;
   width: 250px;
   position: fixed;
@@ -737,7 +785,9 @@ body{
   line-height: 30px;
   font-weight: bold;
 }
-
+#admin .header{
+  position: fixed;
+}
 /* On mouse-over */
 #admin .sidenav a:hover, .dropdown-btn:hover {
   color: #214761;
@@ -771,6 +821,7 @@ body{
   padding-right: 8px;
 }
 #admin .content {
+  width:850px;
 margin-top: 30px;
 margin-left: 280px;
 }
@@ -779,4 +830,215 @@ margin-left: 280px;
 @media screen and (max-height: 450px) {
   #admin .sidenav {padding-top: 15px;}
   #admin .sidenav a {font-size: 18px;}
+}
+#users{
+  margin-top: 5%;
+  height: 200px;
+}
+#users .row{
+  margin-left: 35%;
+}
+#users .col-md-6{
+ background-color: white;
+ text-align: center;
+}
+#booked{
+  height: 100%;
+}
+#booked .col-sm-10{
+  margin-left: 8%;
+  height: 450px;
+}
+#booked .booked_users .header_booked{
+  width: 170px;
+  height: 40px;
+  margin-left: 40%;
+  border-radius: 5%;
+  background-color: #2D92BE;
+  color: white;
+  font-size: 20px;
+  padding-left: 10px;
+  padding-top: 6px;
+}
+#booked .booked_users .row{
+  margin-top: 4%;
+}
+#booked .booked_users .col-sm-8{
+  margin-left: 17%;
+  height: 300px;
+  width: 700px;
+}
+#booked .booked_users .col-sm-8 .well{
+  height: 320px;
+}
+#booked .booked_users .contentPost{
+  width: 460px;
+  height: 200px;
+  float: right;
+}
+#booked .booked_users .labelPost{
+  width: 140px;
+  float: left;
+  background-color: white;
+  height: 235px;
+}
+#booked  .booked_users .labelPost label{
+  margin-left: 3px;
+  margin-top: 3px;
+  padding-top: 4px;
+  width: 140px;
+  height: 31px;
+  border-bottom: 1px solid $color_border_menu_bar;
+}
+
+#booked .booked_users .contentPost .list-product{
+  background-color: white;
+  height: 235px;
+  overflow: hidden;
+}
+#booked .booked_users .contentPost .list-product .row{
+  height: 19px;
+  padding-left: 20px;
+  padding-top: 4px;
+  margin-left: 5px;
+  border-bottom: 0.7px solid $color_border_menu_bar;
+}
+
+#help{
+  height:1700px;
+}
+#help .col-sm-10{
+height: 1700px;
+margin-left: 9%;
+}
+#help .header_help{
+  margin-left: 2%;
+  width: 275px;
+  height: 40px;
+  border-radius: 5%;
+  background-color: #4CAF50;
+  color: white;
+  font-size: 20px;
+  padding-left: 10px;
+  padding-top: 6px;
+}
+#help .b1{
+  margin-top: 30px;
+}
+#help .b1 .step{
+  margin-left: 2%;
+  width: 100px;
+  height: 40px;
+  border-radius: 5%;
+  background-color: #4CAF50;
+  color: white;
+  font-size: 20px;
+  padding-left: 10px;
+  padding-top: 6px;
+}
+#help .b1 img{
+  width:700px;
+}
+#help .b2{
+  margin-top: 200px;
+}
+#help .b2 .step{
+  margin-left: 2%;
+  width: 100px;
+  height: 40px;
+  border-radius: 5%;
+  background-color: #4CAF50;
+  color: white;
+  font-size: 20px;
+  padding-left: 10px;
+  padding-top: 6px;
+}
+#help .b2 img{
+  width:700px;
+  height: 400px;
+}
+#help .b3{
+  margin-top: 500px;
+}
+#help .b3 .step{
+  margin-left: 2%;
+  width: 100px;
+  height: 40px;
+  border-radius: 5%;
+  background-color: #4CAF50;
+  color: white;
+  font-size: 20px;
+  padding-left: 10px;
+  padding-top: 6px;
+}
+#help .b3 img{
+  width:800px;
+  height: 400px;
+}
+#page-inner .panel{
+margin-top: 100px;
+}
+#newbook{
+  height: 500px;
+}
+#newbook .col-sm-10{
+  margin-left: 8%;
+  height: 500px;
+}
+#newbook .header_booked{
+  width: 280px;
+  height: 40px;
+  margin-left: 40%;
+  border-radius: 5%;
+  background-color: #2D92BE;
+  color: white;
+  font-size: 20px;
+  padding-left: 10px;
+  padding-top: 6px;
+}
+#newbook .row{
+  margin-top: 4%;
+}
+#newbook .col-sm-8{
+  margin-left: 17%;
+  height: 300px;
+  width: 700px;
+}
+#newbook .col-sm-8 .well{
+  height: 320px;
+}
+#newbook .contentPost{
+  width: 460px;
+  height: 200px;
+  float: right;
+}
+#newbook .labelPost{
+  width: 140px;
+  float: left;
+  background-color: white;
+  height: 235px;
+}
+#newbook .labelPost label{
+  margin-left: 3px;
+  margin-top: 3px;
+  padding-top: 4px;
+  width: 140px;
+  height: 31px;
+  border-bottom: 1px solid $color_border_menu_bar;
+}
+
+#newbook .contentPost .list-product{
+  background-color: white;
+  height: 235px;
+  overflow: hidden;
+}
+#newbook .contentPost .list-product .row{
+  height: 19px;
+  padding-left: 20px;
+  padding-top: 4px;
+  margin-left: 5px;
+  border-bottom: 0.7px solid $color_border_menu_bar;
+}
+#one{
+  height: 500px;
 }
